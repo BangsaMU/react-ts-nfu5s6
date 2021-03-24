@@ -25,7 +25,6 @@ function DaftarTeman(props) {
       ))}
     </ul>
   );
-  
 }
 
 function DaftarTemanActive(props) {
