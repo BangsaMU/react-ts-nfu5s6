@@ -3,6 +3,23 @@
 <script>
   window.API = {
       fetchFriends() {
+        const encodedURI = encodeURI(`https://6059ae77b11aba001745c94e.mockapi.io/api/v1/users`)
+
+        return fetch(encodedURI)
+          .then((data) => data.json())
+          .then((repos) => repos.)
+          .catch((error) => {
+            console.warn(error)
+            return null
+          });
+      }
+    }
+</script>
+
+
+<!-- <script>
+  window.API = {
+      fetchFriends() {
         return new Promise((res, rej) => {
           const friends = [
               { id: 1, nama: "saya", status: "active" },
@@ -14,19 +31,4 @@
         })
       }
     }
-</script>
-<!-- <script>
-    window.API = {
-      fetchPopularRepos(language = 'all') {
-        const encodedURI = encodeURI(`https://api.github.com/search/repositories?q=stars:>1+language:${language}&sort=stars&order=desc&type=Repositories`)
-
-        return fetch(encodedURI)
-          .then((data) => data.json())
-          .then((repos) => repos.items)
-          .catch((error) => {
-            console.warn(error)
-            return null
-          });
-      }
-    }
-  </script> -->
+</script> -->
