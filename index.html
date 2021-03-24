@@ -1,0 +1,32 @@
+<div id="root"></div>
+
+<script>
+  window.API = {
+      fetchFriends() {
+        return new Promise((res, rej) => {
+          const friends = [
+              { id: 1, nama: "saya", status: "active" },
+              { id: 2, nama: "dia", status: "inActive" },
+              { id: 3, nama: "aku", status: "active" }
+          ]
+
+          setTimeout(() => res(friends), 2000)
+        })
+      }
+    }
+</script>
+<!-- <script>
+    window.API = {
+      fetchPopularRepos(language = 'all') {
+        const encodedURI = encodeURI(`https://api.github.com/search/repositories?q=stars:>1+language:${language}&sort=stars&order=desc&type=Repositories`)
+
+        return fetch(encodedURI)
+          .then((data) => data.json())
+          .then((repos) => repos.items)
+          .catch((error) => {
+            console.warn(error)
+            return null
+          });
+      }
+    }
+  </script> -->
